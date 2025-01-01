@@ -32,4 +32,24 @@ func main() {
 		fmt.Println("Kaam karo bc")
 	}
 
+	// type switch
+	whoAmI := func(i interface{}) {
+		switch t := i.(type) {
+		case int:
+			fmt.Println("Integer hai ye")
+		case string:
+			fmt.Println("string hai ye")
+		case bool:
+			fmt.Println("bool hai ye")
+
+		default:
+			fmt.Println("other", t)
+
+		}
+	}
+
+	whoAmI("golang")
+	whoAmI(true)
+	whoAmI(1)
+	whoAmI(1.1)
 }
